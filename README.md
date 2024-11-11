@@ -107,7 +107,7 @@ EXEC DynamicTablePagination
 
 ### 3.2 Explanation of the Procedure
 
-- **Parameters**: `@BaseUrl`, `@ApiKey`, `@ObjectName`, `@ObjectFields`.
+- **Parameters**: `@BaseUrl`, `@ApiKey`, `@ObjectFields`.
 - **Table Creation**: Dynamically creates temp tables based on fields specified.
 - **Data Fetching**: Uses `GetDynamicData` to retrieve data in batches and inserts it into temp tables.
 
