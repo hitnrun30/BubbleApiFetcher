@@ -102,8 +102,7 @@ This stored procedure dynamically fetches and stores data for specified objects 
 EXEC DynamicTablePagination
     @BaseUrl = 'https://your-bubble-app.bubbleapps.io/api/1.1',
     @ApiKey = 'your_api_key',
-    @ObjectName = 'policy',
-    @ObjectFields = 'policy(Policy Number, Expiration, Status)';
+    @ObjectFields = 'policy(Policy Number, Expiration, Status),driver(*)';
 ```
 
 ### 3.2 Explanation of the Procedure
@@ -115,6 +114,8 @@ EXEC DynamicTablePagination
 ## Usage
 
 To retrieve data after running `DynamicTablePagination`, query the temp tables created (e.g., `##policyTempData`).
+Format is `apikeyname1(field1, field2, Field3),apikeyname2(*)`
+    If you submit a * it will give you the raw JSON.
 
 ## Troubleshooting
 
