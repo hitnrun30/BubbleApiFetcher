@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <PublishSingleFile>true</PublishSingleFile> <!-- Enables single file output -->
+    <SelfContained>true</SelfContained>         <!-- Bundles dependencies -->
+    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract> <!-- Forces all content to bundle -->
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.Server" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="CsvHelper" Version="15.0.5" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+</Project>
